@@ -2,12 +2,22 @@ import org.apache.commons.lang3.StringUtils;
 
 public class RomanNumerals {
     public static void main(String[] args) {
-        System.out.println("Roman Numerals!");
+        System.out.println("Roman Numerals Kata");
     }
 
-    public static String convert(int number) {
-        String numeral = StringUtils.repeat("I", number);
-        return numeral;
+    static int[] ARABICS = {100, 90, 50, 40, 10, 9, 5, 4, 1};
+    static String[] ROMANS = {"C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+
+    public static String convert(int arabic) {
+        String roman = "";
+
+        for(int i = 0; i < ARABICS.length; i++) {
+           while(arabic >= ARABICS[i]) {
+               roman += ROMANS[i];
+               arabic -= ARABICS[i];
+           }
+        }
+        return roman;
     }
 }
 
