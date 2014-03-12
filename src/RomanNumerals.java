@@ -1,7 +1,4 @@
-
-/**
- * Created by alexhill on 3/12/14.
- */
+import org.apache.commons.lang3.StringUtils;
 
 public class RomanNumerals {
     public static void main(String[] args) {
@@ -9,7 +6,8 @@ public class RomanNumerals {
     }
 
     public static String convert(int number) {
-        return "I";
+        String numeral = StringUtils.repeat("I", number);
+        return numeral;
     }
 }
 

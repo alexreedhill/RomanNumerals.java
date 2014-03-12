@@ -7,4 +7,9 @@ public class RomanNumeralsTest {
         String numeral = RomanNumerals.convert(1);
         assertEquals(numeral, "I");
     }
+
+    public void converts2toII() {
+        String numeral = RomanNumerals.convert(2);
+        assertEquals(numeral, "II");
+    }
 }
